@@ -1,0 +1,290 @@
+:root {
+  --primary: #14F195;
+  --secondary: #9945FF;
+  --background: #000000;
+  --text: #FFFFFF;
+  --subtle-glow: 0 0 5px rgba(20, 241, 149, 0.3);
+  --subtle-glow-purple: 0 0 5px rgba(153, 69, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+  background-image: 
+    linear-gradient(rgba(20, 241, 149, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 241, 149, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--primary);
+  background: rgba(0,0,0,0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.logo span {
+  font-size: 2.5em;
+  color: var(--primary);
+}
+
+.buy-btn {
+  background: var(--primary);
+  color: var(--background);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.buy-btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.cyber-btn {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cyber-btn:hover {
+  background: var(--primary);
+  color: var(--background);
+  transform: translateY(-2px);
+}
+
+.contract-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(20, 241, 149, 0.05);
+  border-radius: 8px;
+}
+
+.contract-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.glitch-text {
+  font-size: 4em;
+  text-align: center;
+  color: var(--primary);
+  margin: 40px 0;
+  letter-spacing: 2px;
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.4em;
+  padding: 20px;
+  background: rgba(153, 69, 255, 0.05);
+  border-radius: 8px;
+}
+
+.description p {
+  margin: 15px 0;
+}
+
+.meme-container {
+  width: 100%;
+  margin: 60px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+}
+
+.meme-image {
+  width: 1440px;
+  height: 656px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.meme-image img {
+  width: 1440px;
+  height: 656px;
+  max-width: 100%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.meme-image img:hover {
+  transform: scale(1.02);
+}
+
+.quote-section {
+  text-align: center;
+  margin: 60px auto;
+  padding: 40px;
+  max-width: 1000px;
+  background: rgba(153, 69, 255, 0.05);
+  border: 1px solid var(--secondary);
+  position: relative;
+}
+
+#tweet-quote {
+  font-size: 2.5em;
+  color: var(--secondary);
+  line-height: 1.4;
+  position: relative;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+#tweet-quote::before {
+  content: '"';
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  font-size: 3em;
+  color: var(--primary);
+  opacity: 0.5;
+}
+
+#tweet-quote::after {
+  content: '"';
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  font-size: 3em;
+  color: var(--primary);
+  opacity: 0.5;
+}
+
+.how-to-buy {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid var(--primary);
+  background: rgba(20, 241, 149, 0.05);
+}
+
+.how-to-buy h2 {
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.how-to-buy ol {
+  padding-left: 40px;
+  font-size: 1.4em;
+}
+
+.how-to-buy li {
+  margin: 15px 0;
+  padding: 10px;
+  border-left: 2px solid var(--primary);
+}
+
+.disclaimer {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid var(--secondary);
+  background: rgba(153, 69, 255, 0.05);
+  font-size: 1.1em;
+}
+
+.disclaimer h3 {
+  color: var(--secondary);
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 30px;
+  border-top: 1px solid var(--primary);
+  background: rgba(0,0,0,0.9);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.social-links a {
+  animation: float 3s ease-in-out infinite;
+}
+
+.social-links a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-links a:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 1440px) {
+  .meme-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .meme-image img {
+    width: 100%;
+    height: auto;
+  }
+}
